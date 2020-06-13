@@ -7,5 +7,12 @@ spring:
   profiles:
     active: local
 
+mybatis:
+  type-aliases-package: com.skcc.template.rest.sample_domain.core.domain.entity
+  mapper-locations: db/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: on
+
+
 logging:
   config: classpath:config/log/logback-${spring.profiles.active}.xml
